@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mounjaro Novinky</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fb;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .entry {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+    .entry:last-child {
+      border-bottom: none;
+    }
+    .date {
+      font-weight: bold;
+      color: #555;
+    }
+    .summary {
+      margin: 0.5rem 0;
+    }
+    .link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    .link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mounjaro Novinky – AI Shrnutí Článků</h1>
+    <p>Denně aktualizované výtahy článků na téma GLP-1 a Mounjaro</p>
+  </header>
+  <div class="container" id="content">
+    <p>Načítání dat...</p>
+  </div>
+
+  <script>
+    // Zde můžeš upravit odkaz na data (např. z JSON nebo Sheets API)
+    const DATA_URL = "https://raw.githubusercontent.com/OnLi1971/Mounjaro-novinky/main/data.json";
+
+    async function loadData() {
+      const container = document.getElementById('content');
+      try {
+        const res = await fetch(DATA_URL);
+        const data = await res.json();
+
+        if (!Array.isArray(data) || data.length === 0) {
+          container.innerHTML = '<p>Žádná shrnutí zatím nejsou dostupná.</p>';
+          return;
+        }
+
+        container.innerHTML = data.map(entry => `
+          <div class="entry">
+            <div class="date">📰 ${entry.date}</div>
+            <div class="summary">${entry.summary}</div>
+            <a class="link" href="${entry.url}" target="_blank">Přečíst celý článek</a>
+          </div>
+        `).join('');
+      } catch (err) {
+        container.innerHTML = '<p>Chyba při načítání dat.</p>';
+      }
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
