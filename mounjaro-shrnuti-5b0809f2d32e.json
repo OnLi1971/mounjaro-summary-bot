@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mounjaro-shrnuti",
+  "private_key_id": "5b0809f2d32e681fa328462ade62e4c2bd9b3c57",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDXk3vvlgkia/1N\nyahN+Wn2bw8x8l4F0jmG20RmCaLpOAXiuocC8LK7eq0b58UZr9DxnUZx4pGMsMI/\nafNyd11GnTp05tWcSuREbFTBiBZ07ZVZMbEAyBYftACJlwh1GZYvulq8FAD2IvqV\nN2UD6PekaWd/n3lv7OgQByKTeKwt3S3tqjFhauUa7MGvZRGu8mOIej/p6oFb2d+S\nTCC3dv1SM0uy7esbsa02mDMykwA5VHdayUZuHk879XJKkRohPUkFJA8Eyect4AwN\n9MfeKN5R+X5LT4nrTwCF3jLtWuPVBbJpH0bKfZaIdfTYiBZ9v3Tcdtp4IGH2FYSO\nDR+8n+QBAgMBAAECggEABXxGn+/zy00PaOBv4I0PS9KjYrhZuWDyLwrrDIQkAbZ3\n2t83coUUrTXXzBEbmDXbtZw0h88VuExiovmzlMbyCAsV6tXZW2Th9lZB2VtYw/Cs\nN1Tu/be5rWSXi2i9Ebq9EjmWF7lUFW9KLEwYrU7rJ0M525rfnJAdDxRZZkKAshmF\n2D0HNamefbE6PhN/Y76kUAatVGyA2wArSXdI4OcCCdAN9Kt6W2IDq6POhx8ejIiN\nCLNa8hhYRp517ASR6S3h1n9PKC2T5OYICBjU4Vy7kF7yNtE1Vsx4ywBrXo7ymSnH\nU/qiWmDnJEY/mEg3CEtd/0bKlgbt7ckAGkZErQf12QKBgQD6ArkSoLhGIIDFx2eL\nO/aMa0IeDIGxWo8zlcfhCmZtQ7MzNtdea6WvMk/qsx6hsEpIhRKh8Ohq+XBD+ZeE\nZQelJCEPEVggwNGaoNX26ZC46jQZiTCuBsB0PF53flFYgKn3eNnPkcIMjKLw3nWT\nkSWPeh0eKh0g2S8M9PXMJbf9+QKBgQDcvZRZdfumW0X7DbyOfZI8D4oDuQOuooN8\nDQITUiBdRZPgayKdhMHRlvxJ0FA/p/AYRLNDEwggZ1Ol3etM0Tb//DzK4FC9ZEKX\nF/sSF2equ8xJ31tz8fD+FO1NQQzb7OQgcm+Xkn9lzfDumHy7TMqrAitlaBaQsenX\nrGBsxuo4SQKBgCjlCSDi6UGPT4EKfQVpaYrOgKIpqY05IvNtLKTC7r4wtL9L2S64\nrQFbWXcqlXgdPgleuw2COoJFCvgTe5VMcVOx9TZhv+iboa2JYXZh/ipBJQSITE4r\nDI/2z/z7zJKNeT/hpL8vOG6VEpIT0Wex9lLhxqGIgfs9i1SzPQGHqfEBAoGANCEd\nSKdBP78sXqaW0fu7ri1pRYnK4dIFRSV5SQDLHdvRmV0TtqlkcE+80t28JdxOKh0H\nTJ7Q+34LVg97gw+hcoCqBqtExgVIaJBEPbiDReHF0+hIm7AWXpqok+b513IxSaxc\nyCnTpkIlVON0CXOQJSSFBRS4x4EMnV9bAjVTmOkCgYANf9wwjaScnb8B7iadfW2G\nkxSqA8v8F8sqxdheyZIcc7NO4emODF26uKvYdAUV+AbUkTHkOwjgKQZObobwvDHq\no5X8ryUdgukkuhSQx/mgQHGe1o3pAxYo/vK7KwZ+/PvmVZVCsNvh+Kuct49qy1rP\n/E9ByC9VIACiWrDitbMvaA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "mounjaro-bot@mounjaro-shrnuti.iam.gserviceaccount.com",
+  "client_id": "108555869055426843317",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mounjaro-bot%40mounjaro-shrnuti.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
