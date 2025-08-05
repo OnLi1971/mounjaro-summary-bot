@@ -33,14 +33,18 @@ for idx, row in enumerate(rows, start=2):
         soup = BeautifulSoup(response.text, "html.parser")
         paragraphs = soup.find_all("p")
         content = " ".join(p.get_text() for p in paragraphs)
-        
-        # Získání title nebo h1
-        title = None
+
+        # Získání title nebo h1, fallback na "Bez nadpisu"
+        title = ""
         if soup.title and soup.title.string:
             title = soup.title.string.strip()
         else:
             h1 = soup.find("h1")
-            title = h1.get_text().strip() if h1 else ""
+            if h1 and h1.get_text():
+                title = h1.get_text().strip()
+            else:
+                title = "Bez nadpisu"
+
         # Uložení title do sloupce G (7)
         sheet.update_cell(idx, 7, title)
     except Exception as e:
@@ -49,9 +53,7 @@ for idx, row in enumerate(rows, start=2):
 
     # Shrnutí pomocí OpenAI
     try:
-        prompt = f"Vytvoř mi stručný výtah v bodech v češtině z následujícího článku:
-
-{content[:6000]}"
+        prompt = f"Vytvoř mi stručný výtah v bodech v češtině z následujícího článku:\n\n{content[:6000]}"
         result = openai.ChatCompletion.create(
             model="gpt-4o",
             messages=[
