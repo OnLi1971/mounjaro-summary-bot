@@ -33,6 +33,16 @@ for idx, row in enumerate(rows, start=2):
         soup = BeautifulSoup(response.text, "html.parser")
         paragraphs = soup.find_all("p")
         content = " ".join(p.get_text() for p in paragraphs)
+        
+        # Získání title nebo h1
+        title = None
+        if soup.title and soup.title.string:
+            title = soup.title.string.strip()
+        else:
+            h1 = soup.find("h1")
+            title = h1.get_text().strip() if h1 else ""
+        # Uložení title do sloupce G (7)
+        sheet.update_cell(idx, 7, title)
     except Exception as e:
         sheet.update_cell(idx, 6, f"Chyba načítání: {e}")
         continue
